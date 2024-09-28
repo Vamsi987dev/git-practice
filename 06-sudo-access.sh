@@ -1,7 +1,7 @@
 #!/bin/bash
-if ! sudo -v >/dev/null 2>&1; then
-    echo "do not have sudo access"
-    exit 1
-else
-    echo "give sudo access to user"
+userid=$(id -u)
+if [ $userid -ne 0]; then
+    echo "user do not have access"
+else    
+    echo "user has access"
 fi
