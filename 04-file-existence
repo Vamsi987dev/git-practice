@@ -1,0 +1,8 @@
+#!/bin/bash
+file="/etc/nginx/nginx.conf"
+
+if [ -f "$file"]; then
+    echo"file exists"
+else
+    echo"file doesnot exist"
+fi
