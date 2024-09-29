@@ -1,0 +1,9 @@
+#!/bin/bash
+
+file="01-Hello-World.sh"
+
+if [ -f "$file" ] && [ -w "$file" ]; then
+    echo "file exist and writable"
+else
+    echo "either file doesnot exist or not writable"
+fi
