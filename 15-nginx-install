@@ -1,14 +1,14 @@
 #!/bin/bash
 
-service="nginx"
-userid=$( id -u )
-#checking sudo access
-if [ $userid -eq 0 ]; then
-    echo "user has sudo access"
-else
-    echo "user has no access"
-    exit 1
-fi
+# service="nginx"
+# userid=$( id -u )
+# #checking sudo access
+# if [ $userid -eq 0 ]; then
+#     echo "user has sudo access"
+# else
+#     echo "user has no access"
+#     exit 1
+# fi
 
 #checking if nginx is installed.
 
