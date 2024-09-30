@@ -4,6 +4,6 @@ i=1
 
 until [ $i -gt 10 ]; do
     echo "number: $i"
-    echo " nothing x"
+    echo " nothing x y"
     i=$((i + 1))
 done
