@@ -17,8 +17,8 @@ if [ dnf list installed nginx &> /dev/null ]; then
     echo "nginx is already installed"
 else 
     echo "installing nginx"
-    dnf install nginx -y
-    if [ $? -eq 0]; then
+    sudo dnf install nginx -y
+    if [ $? -eq 0 ]; then
         echo "installation successfull"
     else
         echo "installation failed"
