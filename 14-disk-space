@@ -1,0 +1,10 @@
+#!/bin/bash
+
+threshold=80
+disk_usage=$( df / | grep / | awk '{ print $5 }' | sed 's/%//g')
+
+if [ $disk_usage -gt $threshold ]; then
+    echo "disk usage is above $threshold%. currently at $disk_usage%"
+else
+    echo "disk usage is below $threshold%. currently at $disk_usage%"
+fi
