@@ -6,7 +6,7 @@ userid=$( id -u )
 if [ $userid -eq 0 ]; then
     echo "user has sudo access"
 else
-    ech0 "user has no access"
+    echo "user has no access"
     exit 1
 fi
 
