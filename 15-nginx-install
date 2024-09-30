@@ -1,0 +1,31 @@
+#!/bin/bash
+
+service="nginx"
+userid=$( id -u )
+#checking sudo access
+if [ $userid -eq 0 ]; then
+    echo "user has sudo access"
+else
+    ech0 "user has no access"
+    exit 1
+fi
+
+#checking if nginx is installed.
+
+if [ dnf list installed nginx &> /dev/null ]; then
+    
+    echo "nginx is already installed"
+else 
+    echo "installing nginx"
+    dnf install nginx -y
+    if [ $? -eq 0]; then
+        echo "installation successfull"
+    else
+        echo "installation failed"
+    fi
+fi
+
+
+
+
+
