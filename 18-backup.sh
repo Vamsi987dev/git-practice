@@ -22,7 +22,7 @@ fi
 
 files=$(find ${source_dir} -name "*.log" -mtime +14)
 
-if [ ! -z $files]; then
+if [ ! -z $files ]; then
     echo "files are found"
 else
     echo "no files older than $days"
