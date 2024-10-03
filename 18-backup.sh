@@ -12,21 +12,23 @@ if [ $# -lt 2 ]; then
     usage
 fi
 
-if [ ! -d $source_dir ]; then
-    echo "$source_dir does not exist... please check"
-fi
+for dir in "$$source_dir" "$dest_dir"; do
+    if [ ! -d $dir ]; then
+        echo " $dir does not exist...please check"
+    fi
+done
 
-if [ ! -d $dest_dir ]; then
-    echo "$dest_dir does not exist... please check"
-fi
+files=$(find "${source_dir}" -name "*.log" -mtime +14)
 
-files=$(find ${source_dir} -name "*.log" -mtime +14)
-
-if [ ! -z $files ]; then
+if [ -n "$files" ]; then
     echo "files are found"
+
 else
     echo "no files older than $days"
 fi
+
+
+
 
 
  
