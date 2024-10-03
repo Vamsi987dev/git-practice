@@ -11,6 +11,7 @@ usage() {
 
 if [ $# -lt 2 ]; then
     usage
+    exit 1
 fi
 
 for dir in "$source_dir" "$dest_dir"; do
