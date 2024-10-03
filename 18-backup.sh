@@ -12,7 +12,7 @@ if [ $# -lt 2 ]; then
     usage
 fi
 
-for dir in "$$source_dir" "$dest_dir"; do
+for dir in "$source_dir" "$dest_dir"; do
     if [ ! -d $dir ]; then
         echo " $dir does not exist...please check"
     fi
